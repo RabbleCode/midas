@@ -37,7 +37,7 @@ function midas:LoadPlayerData()
 end
 
 function midas:Announce()    
-    midas:PrintMessageWithPrefix("activated. Starting gold: ".. GetCoinTextureString(midas.Player.Money.SessionStart));
+    midas:PrintMessageWithPrefix("activated. Starting gold: ".. GetMoneyString(midas.Player.Money.SessionStart));
 end
 
 function midas:PrintMessageWithPrefix(message)
@@ -51,11 +51,11 @@ end
 function midas:DisplaySessionEarnings()
     local earnings = midas:GetSessionEarnings()
     if(earnings < 0) then
-        midas:PrintMessageWithPrefix(RED_FONT_COLOR_CODE..'Lost|r '..GetCoinTextureString(math.abs(earnings))..' this session.')
+        midas:PrintMessageWithPrefix(RED_FONT_COLOR_CODE..'Lost|r '..GetMoneyString(math.abs(earnings))..' this session.')
     elseif(earnings > 0) then
-        midas:PrintMessageWithPrefix(GREEN_FONT_COLOR_CODE..'Gained|r '..GetCoinTextureString(earnings)..' this session.')
+        midas:PrintMessageWithPrefix(GREEN_FONT_COLOR_CODE..'Gained|r '..GetMoneyString(earnings)..' this session.')
     else
-        midas:PrintMessageWithPrefix(GetCoinTextureString(earnings)..' changed this session.')
+        midas:PrintMessageWithPrefix(GetMoneyString(earnings)..' changed this session.')
     end
 end
 

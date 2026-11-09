@@ -1,5 +1,5 @@
 # closet
-A simple WoW: Classic addon to track net gold income per session
+A simple WoW: Classic and WoW: Forever addon to track net gold income per session
 
 Usage:
 
