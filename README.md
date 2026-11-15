@@ -1,4 +1,4 @@
-# closet
+# midas
 A simple WoW: Classic and WoW: Forever addon to track net gold income per session
 
 Usage:
